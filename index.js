@@ -1,3 +1,4 @@
+const ID_MIN_LENGTH = 2;
 const ID_MAX_LENGTH = 20;
 const ID_LENGTH = ID_MIN_LENGTH;
 
@@ -341,7 +342,7 @@ app.get("/l", async (req, res) => {
     .toString()
     .split(":");
 
-  if (!(username === process.env.username || "fluxdevelopmentop" && password === process.env.password || "fluxdevelopmentop")) {
+  if (!(username === process.env.username || "fluxlinks" && password === process.env.password || "fluxxylegend")) {
 
   return reject();
   }
@@ -593,7 +594,6 @@ app.get("/:id", async (req, res) => {
   // "Soft" redirect to bypass some social media metadata checks
   if (req.query.soft) {
     return res.end(`
-
     <!-- Soft redirect is being served because ?soft was specified in the URL query parameters. For a HTTP 301 redirect, remove this parameter. -->
     
     <!doctype html>
